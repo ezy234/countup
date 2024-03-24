@@ -1,20 +1,66 @@
+"use client";
+import { CountUp } from "countup.js";
+import { useEffect } from "react";
 import "animate.css";
 
 export default function Home() {
+  useEffect(() => {
+    // const countUp = new CountUp("targetId", 5234, {
+    //   enableScrollSpy: true,
+    //   // scrollSpyOnce: true,
+    //   scrollSpyDelay: 3000,
+    // });
+
+    new CountUp("targetId", 17, {
+      enableScrollSpy: true,
+      // scrollSpyOnce: true,
+      // scrollSpyDelay: 3000,
+    });
+
+    new CountUp("targetId2", 8401, {
+      enableScrollSpy: true,
+      // scrollSpyOnce: true,
+      // scrollSpyDelay: 3000,
+    });
+
+    new CountUp("targetId3", 234, {
+      enableScrollSpy: true,
+      // scrollSpyOnce: true,
+      // scrollSpyDelay: 3000,
+    });
+    // if (!countUp.error) {
+    //   countUp.start();
+    // } else {
+    //   console.error(countUp.error);
+    // }
+  }, []);
+
   return (
-    <div className=" flex justify-center items-center h-screen text-center overflow-hidden">
-      <div className="bg-div"></div>
-      <div className="glass w-[80vw] h-[40vh] md:w-[50vw] md:h-[40vh] animate__animated animate__lightSpeedInRight flex flex-col justify-center">
-        <h1 className="animate__animated animate__tada animate__delay-1s text-[3rem] md:text-[5rem] font-[800] text-orange-900">
-          Animate<span className=" text-black">.</span>css
-        </h1>
-        <p className="animate__animated animate__zoomInDown animate__delay-4s text-[1.2rem] font-[500] mt-[0.5rem]">
-          A cross-browser library for CSS animation
-        </p>
-        <p className="animate__animated animate__zoomInDown animate__delay-5s text-[1rem] font-[300] mt-[0.5rem]">
-          Animate without Javascript
+    <div>
+      <div className="banner">
+        <p className="banner-text1">Experience</p>
+        <p className="banner-text2 animate__animated animate__zoomInDown animate__delay-2s">
+          CountUp.js 🔼
         </p>
       </div>
+      <div className="count-down">
+        <p>We have great achievement to show</p>
+        <div>
+          <div style={{ display: "flex" }}>
+            <div id="targetId"></div>+
+          </div>
+          <p>yrs of experience</p>
+        </div>
+        <div>
+          <div id="targetId2"></div>
+          <p>successful projects</p>
+        </div>
+        <div>
+          <div id="targetId3"></div>
+          <p>clients</p>
+        </div>
+      </div>
+      <p className=" pt-[10rem]"></p>
     </div>
   );
 }

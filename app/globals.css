@@ -2,35 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
-p {
-  --animate-delay: 0.5s;
+body {
+  background-image: url("../public/bg.jpg");
+  background-repeat: no-repeat;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  color: white;
+  overflow-x: hidden;
 }
-.glass {
-  /* From https://css.glass */
+.count-down {
+  height: 15rem;
+  width: 100vw;
+  background-image: url("../public/bg.jpg");
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.count-down > div {
+  margin: 1rem;
   background: rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
+  border-radius: 10px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  height: 9rem;
+  width: 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 800;
+  font-size: 1.1rem;
 }
-.bg-div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-top: 18.74rem solid transparent;
-  border-bottom: 18.74rem solid rgb(239, 237, 232);
-  border-left: 40rem solid orange;
-  border-right: 40rem solid transparent;
+.count-down p {
+  width: 18vw;
+  font-weight: 700;
 }
-
+.count-down > div p {
+  color: rgba(255, 255, 255, 0.665);
+  font-size: 0.7rem;
+}
+.count-down > div div {
+  font-size: 1.3rem;
+}
+.banner {
+  margin: 14.5rem 0 14.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.banner-text1 {
+  font-size: 0.8rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+.banner-text2 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: hsl(209, 36%, 48%);
+}
 @media screen and (max-width: 996px) {
-  .bg-div {
-    border: none;
-    background-color: rgb(239, 237, 232);
-    height: 100vh;
-    width: 100vw;
-  }
 }
