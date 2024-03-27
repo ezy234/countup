@@ -30,7 +30,7 @@ export default function Home() {
     <div>
       <div className="banner">
         <p className="banner-text1">Experience</p>
-        <p className="banner-text2 animate__animated animate_zoomInDown animate__delay-2s">
+        <p className="banner-text2 animate__animated animate__zoomInDown animate__delay-2s">
           CountUp.js 🔼
         </p>
       </div>
